@@ -3,7 +3,8 @@
 
 #include <iostream>
 
-const char* month_name[] = {
+const int max_month_name_len = 9;
+char month_name[12][max_month_name_len + 1] = {
 	"January", "February", "March",
 	"April", "May", "June",
 	"July", "August", "September",
@@ -18,7 +19,7 @@ const int days_in_month[] = {
 };
 
 struct month {
-	const char* name;
+	char* name;
 	int days;
 };
 

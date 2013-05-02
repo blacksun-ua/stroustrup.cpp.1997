@@ -3,7 +3,21 @@
 
 #include <iostream>
 
+const size_t sz = 10;
+void test_by_index(int array[sz]);
+void test_by_pointer(int* array, int size);
+
 int main(int argc, char* argv[])
 {
+    int array1[sz], array2[sz];
+    test_by_index(array1);
+    test_by_pointer(array2, sz);
+    for(size_t i = 0; i < sz; ++i)
+        std::cout << "a1[" << i << "]=" << array1[i] << ", a2["<< i << "]=" << array2[i] << "\n";
+
     return 0;
 }
+
+
+// Если только скомилировать файлы 08_1.cpp 08_2.cpp, а потом воспользоватся дизасеммблером, то можно увидеть что компилятор генерирует 
+// эквивалентный, но не одинаковый код. Почему-то использование флага О3 увеличивает размер кода.
