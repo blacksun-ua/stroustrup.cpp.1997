@@ -47,7 +47,7 @@ void sort(string_t& s)
 }
 
 
-void default_solution()
+void solution1()
 {
 	typedef list<string> string_t;
 	string_t storage;
@@ -59,7 +59,7 @@ void default_solution()
 	print_words(storage);	
 }
 
-void solution1()
+void solution2()
 {
 	string_t storage;
 	read_words(storage);
@@ -74,7 +74,7 @@ int main(int argc, char* argv[])
 	if("1" == argv[1])
 		solution1();
 	else
-		default_solution();
+		solution2();
 	
 	return 0;
 }
